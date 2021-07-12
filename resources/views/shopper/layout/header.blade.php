@@ -2,7 +2,7 @@
 
     <!-- Logo starts -->
     <a href="/shopper" class="logo">
-        <img class="im-responsive" src="{{asset('admin/img/shopownerlogo.PNG')}}" alt="Shop Owner Dashboard" />
+
     </a>
     <!-- Logo ends -->
 

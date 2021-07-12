@@ -26,16 +26,12 @@
         <li>
             <a href="#">
                 <i class="icon-head"></i>
-                <span class="menu-item">Category</span>
+                <span class="menu-item">Order</span>
                 <span class="down-arrow"></span>
             </a>
             <ul>
-
                 <li>
-                    <a href='{{route('create_category')}}'>Create category</a>
-                </li>
-                <li>
-                    <a href='{{ route('category') }}'>Category list</a>
+                    <a href='{{ route('order.index') }}'>Order List</a>
                 </li>
 
 

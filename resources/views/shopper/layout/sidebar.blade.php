@@ -4,12 +4,10 @@
         <i class="icon-menu2"></i>
     </button>
     <!-- Collapse menu ends -->
-
     <!-- Current user starts -->
     <div class="user-details clearfix">
         <a href="#" class="user-img">
             <img src="{{asset('admin/img/thumbs/Capture.PNG')}}" alt="User Info">
-
         </a>
         <h5 class="user-name">Mehedi</h5>
     </div>
@@ -30,15 +28,12 @@
                 <span class="down-arrow"></span>
             </a>
             <ul>
-
                 <li>
                     <a href='{{url('addProduct')}}'>Add Product</a>
                 </li>
                 <li>
                     <a href='{{ route('product',auth()->user()->id) }}'>Product list</a>
                 </li>
-
-
             </ul>
         </li>
         <li>
@@ -48,18 +43,14 @@
                 <span class="down-arrow"></span>
             </a>
             <ul>
-
                 <li>
                     <a href='{{route('stock_create',auth()->user()->id)}}'>Add Stock</a>
                 </li>
                 <li>
                     <a href='{{ route('stock',auth()->user()->id) }}'>Product list(Stock)</a>
                 </li>
-
-
             </ul>
         </li>
-
         <li>
             <a href="#">
                 <i class="icon-database"></i>
@@ -67,15 +58,24 @@
                 <span class="down-arrow"></span>
             </a>
             <ul>
-
                 <li>
                     <a href='{{route('discount_create',auth()->user()->id)}}'>Add Discount</a>
                 </li>
                 <li>
                     <a href='{{ route('discount',auth()->user()->id) }}'>Check Discount</a>
                 </li>
-
-
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class="icon-database"></i>
+                <span class="menu-item">Order</span>
+                <span class="down-arrow"></span>
+            </a>
+            <ul>
+                <li>
+                    <a href='{{route('order.list',auth()->user()->id)}}'>Order List</a>
+                </li>
             </ul>
         </li>
 

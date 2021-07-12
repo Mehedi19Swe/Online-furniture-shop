@@ -1,6 +1,5 @@
 @extends('shopper.layout.master')
 @section('content')
-
     <script>
         $(document).ready(function () {
             $('.product').change(function () {

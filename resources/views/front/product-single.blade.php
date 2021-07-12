@@ -29,7 +29,7 @@
 
           				</div>
           	<p><a href="{{route('addTo_cart',$product->id)}}" class="btn btn-black py-3 px-5">Add to Cart</a></p>
-          	<p><a href="#" class="btn btn-black py-3 px-5">Buy Now</a></p>
+          	<p><a href="/precheck" class="btn btn-black py-3 px-5">Buy Now</a></p>
     			</div>
     		</div>
     	</div>

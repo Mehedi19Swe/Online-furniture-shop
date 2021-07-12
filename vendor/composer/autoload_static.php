@@ -19,6 +19,7 @@ class ComposerStaticInitc8a8be7d55d3ba66bdc54281ab690ea6
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '8fde5feda9697fe0ee53a3938c839fb0' => __DIR__ . '/../..' . '/app/Helpers/Helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -352,9 +353,11 @@ class ComposerStaticInitc8a8be7d55d3ba66bdc54281ab690ea6
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DiscountController' => __DIR__ . '/../..' . '/app/Http/Controllers/DiscountController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\StockController' => __DIR__ . '/../..' . '/app/Http/Controllers/StockController.php',
         'App\\Http\\Controllers\\frontController' => __DIR__ . '/../..' . '/app/Http/Controllers/frontController.php',
+        'App\\Http\\Controllers\\orderProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/orderProductController.php',
         'App\\Http\\Controllers\\verificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/verificationController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -375,7 +378,9 @@ class ComposerStaticInitc8a8be7d55d3ba66bdc54281ab690ea6
         'App\\customer' => __DIR__ . '/../..' . '/app/customer.php',
         'App\\discount' => __DIR__ . '/../..' . '/app/discount.php',
         'App\\order' => __DIR__ . '/../..' . '/app/order.php',
+        'App\\orderProduct' => __DIR__ . '/../..' . '/app/orderProduct.php',
         'App\\product' => __DIR__ . '/../..' . '/app/product.php',
+        'App\\shipping' => __DIR__ . '/../..' . '/app/shipping.php',
         'App\\shopper' => __DIR__ . '/../..' . '/app/shopper.php',
         'App\\stock' => __DIR__ . '/../..' . '/app/stock.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',

@@ -34,19 +34,19 @@
 												</div>
 											</div>
 										</td>
-										<td data-th="Price">${{ $details['price'] }}</td>
+										<td data-th="Price">৳{{ $details['price'] }}</td>
                                     <form action="{{route('update_cart')}}" method="get">
 										<td data-th="Quantity">
 											<input type="number" min="1" name="quantity" value="{{
 											$details['quantity'] }}"
                                                    class="form-control quantity" />
 										 </td>
-										 <td data-th="Subtotal" class="text-center">${{ $details['price'] *
+										 <td data-th="Subtotal" class="text-center">৳{{ $details['price'] *
 										 $details['quantity'] }}</td>
 										 <td class="actions" data-th="">
 
 												 <input type="hidden" name="id" value="{{ $details['id']}}">
-												 <input type="submit" value="Refresh" class="btn btn-info btn-sm
+												 <input type="submit" value="Update" class="btn btn-info btn-sm
 												 update-cart">
 									</form>
 
@@ -65,7 +65,7 @@
 							<tr>
 								<td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 								<td colspan="2" class="hidden-xs"></td>
-								<td class="hidden-xs text-center"><strong>Total ${{ $total }}</strong></td>
+								<td class="hidden-xs text-center"><strong>Total ৳{{ $total }}</strong></td>
 							</tr>
 							</tfoot>
 						  </table>
@@ -83,11 +83,11 @@
     					</p>
     					<p class="d-flex">
     						<span>Delivery</span>
-    						<span>$50.00</span>
+    						<span>৳50.00</span>
     					</p>
     					<p class="d-flex">
     						<span>Discount</span>
-    						<span>$0.00</span>
+    						<span>৳0.00</span>
     					</p>
     					<hr>
     					<p class="d-flex total-price">
@@ -109,24 +109,7 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
-      <div class="container py-4">
-        <div class="row d-flex justify-content-center py-5">
-          <div class="col-md-6">
-          	<h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
-          	<span>Get e-mail updates about our latest shops and special offers</span>
-          </div>
-          <div class="col-md-6 d-flex align-items-center">
-            <form action="#" class="subscribe-form">
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" placeholder="Enter email address">
-                <input type="submit" value="Subscribe" class="submit px-3">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
 	<script type="text/javascript">
 

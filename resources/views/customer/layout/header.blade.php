@@ -2,7 +2,7 @@
 
     <!-- Logo starts -->
     <a href="index.php" class="logo">
-        <img class="im-responsive" src="{{asset('admin/img/customerlogo.PNG')}}" alt="Admin Dashboard Logo" />
+
     </a>
     <!-- Logo ends -->
 

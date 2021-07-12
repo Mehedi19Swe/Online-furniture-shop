@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,8 @@
 
 
 Route::get('/','frontController@welcome');
+//Route::get('/about','frontController@about');
+//Route::get('/contact','frontController@contact');
 Route::get('/singleProduct/{id}','frontController@singleProductView');
 Route::get('/cart','CartController@index')->name('view_cart');
 
@@ -24,6 +27,9 @@ Route::get('/checkout','frontController@checkout')->middleware('customer')->name
 Route::get('/cart/add/{cart}','CartController@create')->name('addTo_cart');
 Route::get('/cart/update','CartController@update')->name('update_cart');
 Route::get('/cart/delete/{id}','CartController@destroy')->name('delete_cart');
+
+//Search routes..........
+Route::get('/search/results','frontController@search')->name('product.search');
 
 
 Auth::routes();
@@ -57,6 +63,11 @@ Route::group(['middleware' => ['customer']], function () {
 
     Route::get('/customer', 'HomeController@customer');
 
+    Route::post('order/store','OrderController@store')->name('order.store');
+    Route::get('myOrder','OrderController@index')->name('order.index');
+    Route::get('myOrder/{id}/update','OrderController@update')->name('order.update');
+    Route::get('myOrder/{id}/delete','OrderController@destroy')->name('order.delete');
+
 });
 
 
@@ -88,6 +99,11 @@ Route::group(['middleware' => ['shopper']], function () {
     Route::post('/discount/{discount}/update', 'DiscountController@update')->name('update_discount');
     Route::post('/discount/{discount}/delete', 'DiscountController@destroy')->name('destroy_discount');
     Route::post('/depend','DiscountController@dependValue');
+
+    //Order controller
+    Route::get('/order/{id}/list','OrderController@orderList')->name('order.list');
+    Route::get('/order/{id}/update/status','OrderController@ConfirmOrder')->name('order.updateStatus');
+    Route::get('/order/{id}/cancel','OrderController@cancelOrder')->name('order.cancelOrder');
 
 });
 

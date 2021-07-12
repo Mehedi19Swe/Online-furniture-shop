@@ -41,7 +41,7 @@
                                     <input class="form-control" type="hidden" name="sold" value=0>
                                 </div>
                                 <center>
-                                    <input type="submit" value="Add Product" class="btn btn-info btn-lg">
+                                    <input type="submit" value="Add stock" class="btn btn-info btn-lg">
                                 </center>
 
                                 <div class="col-sm-3"></div>

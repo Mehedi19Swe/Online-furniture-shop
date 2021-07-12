@@ -1,5 +1,6 @@
 @extends('front.layout.master')
 @section('content')
+
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
             <div class="slider-item" style="background-image: url('style/images/1.jpg');">
@@ -10,10 +11,13 @@
                         <div class="col-md-12 ftco-animate text-center">
                             <h1 class="mb-2">Various Company Furniture Products</h1>
                             <h2 class="subheading mb-4">Choice your furniture products</h2>
+
                         </div>
+
                     </div>
                 </div>
             </div>
+
             <div class="slider-item" style="background-image: url('style/images/2.jpg');">
                 <div class="overlay"></div>
                 <div class="container">
@@ -22,7 +26,9 @@
                         <div class="col-sm-12 ftco-animate text-center">
                             <h1 class="mb-2">Various Company Furniture Products</h1>
                             <h2 class="subheading mb-4">Choice your furniture products</h2>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -34,7 +40,9 @@
                         <div class="col-sm-12 ftco-animate text-center">
                             <h1 class="mb-2">Various Company Furniture Products</h1>
                             <h2 class="subheading mb-4">Choice your furniture products</h2>
+
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -45,7 +53,7 @@
         <div class="container">
             <!-- Default search bars with input group -->
             <div class="row justify-content">
-                <form action="{{route('product.search')}}" method="get">
+                <form action="{{route('product.search')}}" method="post">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="input-group mb-5">
                         <select name="category">
@@ -110,8 +118,8 @@
                                         @foreach($discount as $dis)
                                             @if($item->id == $dis->product)
                                                 <p class="price"><span class="mr-2
-												price-dc">৳{{$item->price}}</span><span
-                                                            class="price-sale">৳{{$dis->newPrice}}</span></p>
+												price-dc">${{$item->price}}</span><span
+                                                            class="price-sale">${{$dis->newPrice}}</span></p>
                                                 <?php $a = 1; ?>
                                                 @break
                                             @else
@@ -120,7 +128,7 @@
                                         @endforeach
 
                                         @if($a != 1)
-                                            <p class="price"><span class="price-sale">{{$item->price}}</span></p>
+                                            <p class="price"><span class="price-sale">{{$item->price}}{{$item->id}}</span></p>
                                         @endif
 
                                     </div>
@@ -131,7 +139,10 @@
                                            class="buy-now d-flex justify-content-center align-items-center mx-1">
                                             <span title="Add to Cart"><i class="ion-ios-cart"></i></span>
                                         </a>
-
+                                        <a href="#"
+                                           class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                            <span title="Order Now"><i class="ion-ios-browsers"></i></span>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -175,6 +186,8 @@
             </div>
         </div>
     </section>
+
+
 
 @endsection
 

@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
     <link rel="stylesheet" href="{{asset('style/css/icomoon.css')}}">
     <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body class="goto-here">
 <div class="py-1 bg-primary">
@@ -41,9 +44,9 @@
                         <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
                         <span class="text">mehedihasan.swe16@gmail.com</span>
                     </div>
-                    <div class="col-md-4 pr-4 d-flex topper align-items-center text-lg-right">
-                        <a href="/login"><span class="text">Login </span></a> | - |
-                        <a href="/register"><span class="text"> Registration</span></a>
+                    <div class="col-md-2 pr-2 d-flex topper align-items-center text-lg-right">
+                        <a href="/register"><span class="text">Registration</span></a>| - |
+                        <a href="/login"><span class="text">Login</span></a>
                     </div>
                 </div>
             </div>
@@ -63,8 +66,8 @@
                 <li class="nav-item"><a href="/" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/" class="nav-link">Contact</a></li>
                 <li class="nav-item cta cta-colored"><a href="{{route('view_cart')}}" class="nav-link"><span
-                                class="icon-shopping_cart"></span>[0]</a></li>
-
+                   class="icon-shopping_cart"></span><?php if(session('cart')){ echo count(session('cart'));
+                   }?></a></li>
             </ul>
         </div>
     </div>
@@ -76,7 +79,6 @@
         <center>{{ session()->get('success') }}</center>
     </div>
 @endif
-
 @yield('content')
 
 <footer class="ftco-footer ftco-section">
